@@ -1,7 +1,11 @@
 import React, { Component } from "react";
 import './App.css';
 import axios from "axios";
+import Header from './Header.js';
 import LatestNewsTiles from './LatestNewsTiles.js';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faSyncAlt } from '@fortawesome/free-solid-svg-icons';
+library.add(faSyncAlt)
 
 
 class App extends Component {
@@ -16,11 +20,7 @@ class App extends Component {
     axios({
       method: "GET",
       url: `https://api.nytimes.com/svc/topstories/v2/technology.json?api-key=3JUrifoNOPNfy5hZecIGlU6pbGQ0f71x`,
-      dataResponse: "json",
-      // params: {
-      //   // apikey: apiKey
-      //   // section: technology,
-      // }
+      dataResponse: "json"
     }).then((response) => {
       response = response.data.results;
       console.log(response);
@@ -35,23 +35,25 @@ class App extends Component {
   render() {
     return (
       <div>
-        <h1>Stories on the go!</h1>
 
-        {
-          this.state.stories.map((articles, index) => {
-            return(
-              <LatestNewsTiles
-                key={articles.i}
-                title={articles.title}
-                published={articles.published_date}
-                read={articles.url}
-              />
-            )
+            <Header />
+        
+            {this.state.stories.map((articles, index) => {
+              return (
+                <LatestNewsTiles
+                  image={articles.multimedia[0].url}
+                  alt={articles.multimedia[0].caption}
+                  key={articles[index]}
+                  title={articles.title}
+                  published={articles.published_date}
+                  read={articles.url}
+                />
+              )
+              
           })
         }
       </div>
-    )
+        )
   }
 }
-
 export default App;
