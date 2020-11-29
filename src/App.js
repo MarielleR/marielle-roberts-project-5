@@ -13,7 +13,6 @@ class App extends Component {
   }
   
   componentDidMount() {
-    const apiKey = `3JUrifoNOPNfy5hZecIGlU6pbGQ0f71x`;
     axios({
       method: "GET",
       url: `https://api.nytimes.com/svc/topstories/v2/technology.json?api-key=3JUrifoNOPNfy5hZecIGlU6pbGQ0f71x`,
@@ -25,7 +24,10 @@ class App extends Component {
     }).then((response) => {
       response = response.data.results;
       console.log(response);
-    })
+      this.setState({
+        stories: response,
+      });
+    });
   }
 
 
@@ -34,6 +36,19 @@ class App extends Component {
     return (
       <div>
         <h1>Stories on the go!</h1>
+
+        {
+          this.state.stories.map((articles, index) => {
+            return(
+              <LatestNewsTiles
+                key={articles.i}
+                title={articles.title}
+                published={articles.published_date}
+                read={articles.url}
+              />
+            )
+          })
+        }
       </div>
     )
   }
