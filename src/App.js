@@ -3,9 +3,6 @@ import './App.css';
 import axios from "axios";
 import Header from './Header.js';
 import LatestNewsTiles from './LatestNewsTiles.js';
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { faSyncAlt } from '@fortawesome/free-solid-svg-icons';
-library.add(faSyncAlt)
 
 
 class App extends Component {
@@ -13,6 +10,7 @@ class App extends Component {
     super();
     this.state = {
       stories: [],
+      allStories: []
     };
   }
   
@@ -26,17 +24,25 @@ class App extends Component {
       console.log(response);
       this.setState({
         stories: response,
+        allStories: response
       });
     });
   }
 
 
+  displaySearchResults = (data) => {
+    this.setState({
+      stories: data
+    });
+  }
 
   render() {
     return (
       <div>
-
-            <Header />
+            <Header 
+            searchResults={this.state.stories}
+            searchResultsFunction={this.displaySearchResults}
+            />
         
             {this.state.stories.map((articles, index) => {
               return (
