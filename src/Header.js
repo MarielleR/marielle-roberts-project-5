@@ -50,6 +50,10 @@ class Header extends Component {
                     <i class="fab fa-facebook-square"></i>
                     <i class="fab fa-instagram-square"></i>
                 </div>
+
+                <div className="credits">
+                    <h4>Created by Marielle Roberts at Juno College</h4>
+                </div>
            </div>
         )
     }
