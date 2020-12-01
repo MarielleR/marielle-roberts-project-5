@@ -3,6 +3,7 @@ import './App.css';
 import axios from "axios";
 import Header from './Header.js';
 import LatestNewsTiles from './LatestNewsTiles.js';
+import TilesList from './TilesList.js';
 
 
 class App extends Component {
@@ -38,12 +39,13 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-            <Header 
-            searchResults={this.state.stories}
-            searchResultsFunction={this.displaySearchResults}
-            />
-        
+      <div className="wrapper">
+          <div className="main-container">
+              <Header 
+              searchResults={this.state.stories}
+              searchResultsFunction={this.displaySearchResults}
+              />
+              <TilesList >
             {this.state.stories.map((articles, index) => {
               return (
                 <LatestNewsTiles
@@ -55,9 +57,11 @@ class App extends Component {
                   read={articles.url}
                 />
               )
-              
-          })
-        }
+
+            })
+            }
+            </TilesList>
+          </div>
       </div>
         )
   }
