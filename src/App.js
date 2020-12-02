@@ -39,7 +39,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="wrapper">
+      // <div className="wrapper">
           <div className="main-container">
               <Header 
               searchResults={this.state.stories}
@@ -62,7 +62,7 @@ class App extends Component {
             }
             </TilesList>
           </div>
-      </div>
+      // </div>
         )
   }
 }

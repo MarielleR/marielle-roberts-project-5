@@ -8,7 +8,9 @@ class LatestNewsTiles extends Component {
                <img src={this.props.image} alt={this.props.alt}/>
                <h2>{this.props.title}</h2>
                 <p>{this.props.published}</p>
-                <a href={this.props.read}>READ MORE</a>
+                <div className="read-div">
+                   <a href={this.props.read} className="read">READ MORE</a>
+                </div>
            </div>
        )
    }

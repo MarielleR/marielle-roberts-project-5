@@ -52,7 +52,7 @@ class Header extends Component {
                 </div>
 
                 <div className="credits">
-                    <h4>Created by Marielle Roberts at Juno College</h4>
+                    <h4>Created by Marielle Roberts at <span>Juno College</span></h4>
                 </div>
            </div>
         )
