@@ -1,4 +1,5 @@
-/* Global Styles */
+/* GLOBAL STYLES */
+
 * {
     padding: 0;
     margin: 0;
@@ -18,13 +19,8 @@ img {
     height: auto;
     display: block;
 }
-.wrapper {
-    max-width: 1280px;
-    width: 99%;
-    margin: 0 auto;
-}
 
-/* Typography */
+/* TYPOGRAPHY */
 h1,
 h3,
 input {
@@ -35,7 +31,7 @@ h1 {
   font-size: 4rem;
 }
 
-/* Header Styling */
+/* HEADER STYLING  */
 .fa-mask {
   font-size: 3rem;
   color: #43aa8b;
@@ -55,6 +51,7 @@ h1 {
 button {
   background-color: #c5e8dd;
 }
+
 .reload {
   padding: 7px 20px;
 }
@@ -71,8 +68,6 @@ input,
 }
 
 h4 {
-  /* position: absolute;
-  top: 96%; */
   margin-top: 5px;
   display: flex;
   justify-content: center;
@@ -84,30 +79,18 @@ span {
   color: #43aa8b;
 }
 
-span:hover,
-span:focus {
-  text-decoration: #43aa8b 3px underline;
-}
-
-
-/* Main Styling */
+/* MAIN STYLING */
 .main-container {
   display: flex;
 }
 
 .header-container {
   position: fixed;
-  /* margin-right: 50px; */
   background-color: #f8f9fa;
   height: 100vh;
   width: 300px;
   text-align: center;
 }
-
-/* .credits {
-  text-align: center;
-  justify-content: center;
-} */
 
 h3 {
   font-size: 1.7rem;
@@ -128,12 +111,16 @@ h3 {
   margin-left: 30px;
 }
 
-/* Hover/Focus States */
+/* HOVER FOCUS STATES */
+span:hover,
+span:focus {
+  text-decoration: #43aa8b 3px underline;
+}
+
 button:hover,
 button:focus {
   background-color: goldenrod;
 }
-
 
 .social-media i:hover,
 .social-media i:focus {
@@ -144,7 +131,7 @@ button:focus {
   background-color: goldenrod;
 }
 
-/* Dynamic styles */
+/* DYNAMIC STYLES */
 .container {
   margin-left: 28%;
   margin-top: 20px;
@@ -154,7 +141,6 @@ button:focus {
 
 .tile-container {
   padding: 20px 30px;
-  /* border: 1px solid red; */
   background-color: #c5e8dd;
   margin-bottom: 30px;
   border: 1px dotted grey;
@@ -171,7 +157,6 @@ h5 {
   font-size: 1.3rem;
   margin-top: 7px;
   margin-bottom: 15px;
-
 }
 
 p {
@@ -195,11 +180,12 @@ p {
   margin-bottom: 25px;
 }
 
-/* Media Queries */
+/* MEDIA QUERIES */
 @media (max-width: 1087px) {
   h1 {
     font-size: 5.2rem;
   }
+  
   .main-container {
     display: flex;
     flex-direction: column;
@@ -230,8 +216,34 @@ p {
 }
 
 @media (max-width: 551px) {
+
+  .header-container {
+    position: static;
+    height: 45vh;
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
   h2 {
     font-size: 2.5rem;
+  }
+
+  i .fa-twitter-square,
+  i .fa-linkedin,
+  i .fa-facebook-square,
+  i .fa-instagram-square
+  {
+    font-size: 5px;
+  }
+
+   .credits {
+    margin-top: 8px;
+  }
+
+  h3 {
+    display: none;
   }
 
   .read {

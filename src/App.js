@@ -5,7 +5,6 @@ import Header from './Header.js';
 import LatestNewsTiles from './LatestNewsTiles.js';
 import TilesList from './TilesList.js';
 
-
 class App extends Component {
   constructor () {
     super();
@@ -30,7 +29,6 @@ class App extends Component {
     });
   }
 
-
   displaySearchResults = (data) => {
     this.setState({
       stories: data
@@ -39,7 +37,7 @@ class App extends Component {
 
   render() {
     return (
-      // <div className="wrapper">
+      //I did not use a wrapper intentionally here, for my design!
           <div className="main-container">
               <Header 
               searchResults={this.state.stories}
@@ -58,13 +56,12 @@ class App extends Component {
                   read={articles.url}
                 />
               )
-
             })
             }
             </TilesList>
           </div>
-        //  </div>
         )
   }
 }
+
 export default App;

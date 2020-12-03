@@ -22,7 +22,6 @@ class Header extends Component {
                 return dataItem
             }
         })
-        // console.log(userSearchResults);
         this.props.searchResultsFunction(userSearchResults);
     }
     render() { 
@@ -31,19 +30,14 @@ class Header extends Component {
                 <h1>The Tech Insider<i class="fas fa-mask"></i></h1>
                 <div className="second-row">
                     <button onClick={() => window.location.reload(false)} className="reload-button" title="Click for the latest news"><i className="fas fa-sync-alt reload"></i></button>
-
                     <form action="" className="search-bar" onSubmit={this.handleSubmit}>
-
                         <input id="search" className="search-articles" type="text" placeholder="Search in here!" onChange={this.handleSearch} value={this.state.userSearch} />
-
                         <label htmlFor="search" className="sr-only"></label>
-
                         <button className="search-btn" value="submit" type="submit"><i class="fas fa-search" ></i></button>
                     </form>
                 </div>
                 
                 <div className="third-row">
-
                     <div className="social-media">
                         <h3>Follow us for latest news on the go!</h3>
                         <i class="fab fa-twitter-square"></i>
@@ -56,8 +50,9 @@ class Header extends Component {
                         <h4>Created by Marielle Roberts at <span>Juno College</span></h4>
                     </div>
                 </div>
-           </div>
+            </div>
         )
     }
 }
+
 export default Header;
