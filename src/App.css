@@ -197,6 +197,9 @@ p {
 
 /* Media Queries */
 @media (max-width: 1087px) {
+  h1 {
+    font-size: 5.2rem;
+  }
   .main-container {
     display: flex;
     flex-direction: column;
@@ -204,5 +207,34 @@ p {
 
   .header-container {
     position: static;
+    height: 60vh;
+    width: 100%;
+  }
+
+  .third-row {
+    position: static;
+    margin-left: 0px;
+  }
+
+  .reload-button {
+    margin-bottom: 0;
+  }
+
+  .credits {
+    margin-top: 38px;
+  }
+
+  .container {
+    margin-left: 15px;
+  }
+}
+
+@media (max-width: 551px) {
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  .read {
+    padding: 8px 25px;
   }
 }
