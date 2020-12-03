@@ -158,19 +158,9 @@ button:focus {
   background-color: #c5e8dd;
   margin-bottom: 30px;
   border: 1px dotted grey;
+  border-radius: 3%;
 }  
 
-/* .tile-container:nth-of-type(2n) {
-  width: 300px;
-}
-
-.tile-container:nth-of-type(3n) {
-  width: 450px;
-}
-
-.tile-container:nth-of-type(4n) {
-  width: 200px;
-} */
 h2 {
   font-size: 3rem;
   margin-top: 7px;
@@ -203,4 +193,16 @@ p {
   font-weight: bolder;
   font-size: 1.8rem;
   margin-bottom: 25px;
+}
+
+/* Media Queries */
+@media (max-width: 1087px) {
+  .main-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header-container {
+    position: static;
+  }
 }
