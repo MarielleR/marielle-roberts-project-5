@@ -42,17 +42,19 @@ class Header extends Component {
                     </form>
                 </div>
                 
+                <div className="third-row">
 
-                <div className="social-media">
-                    <h3>Follow us for latest news on the go!</h3>
-                    <i class="fab fa-twitter-square"></i>
-                    <i class="fab fa-linkedin"></i>
-                    <i class="fab fa-facebook-square"></i>
-                    <i class="fab fa-instagram-square"></i>
-                </div>
+                    <div className="social-media">
+                        <h3>Follow us for latest news on the go!</h3>
+                        <i class="fab fa-twitter-square"></i>
+                        <i class="fab fa-linkedin"></i>
+                        <i class="fab fa-facebook-square"></i>
+                        <i class="fab fa-instagram-square"></i>
+                    </div>
 
-                <div className="credits">
-                    <h4>Created by Marielle Roberts at <span>Juno College</span></h4>
+                    <div className="credits">
+                        <h4>Created by Marielle Roberts at <span>Juno College</span></h4>
+                    </div>
                 </div>
            </div>
         )

@@ -54,6 +54,7 @@ class App extends Component {
                   key={articles[index]}
                   title={articles.title}
                   published={articles.published_date}
+                  abstract={articles.abstract}
                   read={articles.url}
                 />
               )
@@ -62,7 +63,7 @@ class App extends Component {
             }
             </TilesList>
           </div>
-      // </div>
+        //  </div>
         )
   }
 }
