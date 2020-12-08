@@ -47,8 +47,8 @@ class App extends Component {
             {this.state.stories.map((articles, index) => {
               return (
                 <LatestNewsTiles
-                  image={articles.multimedia[0].url}
-                  alt={articles.multimedia[0].caption}
+                  image={articles.multimedia ? articles.multimedia[0].url : null} 
+                  alt={articles.multimedia? articles.multimedia[0].caption : null}
                   key={articles[index]}
                   title={articles.title}
                   published={articles.published_date}
